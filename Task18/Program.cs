@@ -5,7 +5,7 @@
 Console.WriteLine("Введите номер четверти");
 string num = Console.ReadLine();
 
-string result  = Range (num); // 2 - применили этот Метод
+string result  = Range (num); // 2 - применили этот метод
 Console.WriteLine(result);
 
 string Range (string number) // 1 - сделали Метод, который возвращает значение
