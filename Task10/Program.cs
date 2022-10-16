@@ -16,7 +16,7 @@ bool Check (int num)
     // return res;
 }
 
-int Method(int num);
+int Method(int num)
 {
     return num / 10 % 10; // 345
 }
