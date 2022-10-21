@@ -6,12 +6,12 @@ int[] array = new int[8];
 Array(array);
 
 void Array(int[] numbers)
- {
-    for(int index = 0; index < numbers.Length; index++)
-     {
-        numbers[index] = new Random().Next(0,8); 
-        Console.Write (numbers[index] + ",");
-        
-     }
- }
+{
+    for (int index = 0; index < numbers.Length; index++)
+    {
+        numbers[index] = new Random().Next(0, 8);
+        Console.Write(numbers[index] + ",");
+
+    }
+}
 
