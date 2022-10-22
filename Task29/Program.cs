@@ -9,6 +9,7 @@ int[] FillArray(int num)
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = rnd.Next (0,8);
+    
     }
     return array;
 }
