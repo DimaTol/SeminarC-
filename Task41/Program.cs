@@ -1,4 +1,4 @@
-﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. 
+// Задача 41: Пользователь вводит с клавиатуры M чисел. 
 // Посчитайте, сколько чисел больше 0 ввёл пользователь.
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
@@ -6,10 +6,14 @@ Console.WriteLine("Сколько чисел будете вводить? ");
 int num = Convert.ToInt32(Console.ReadLine());
 int[] array = new int[num]; // преобразуем числа в массив, которые ввел пользователь
 
-for (int i = 0; i < num; i++)
+
+void FillArray(int[] nums)
 {
-    Console.WriteLine($"Введите число ({i})");
-    array[i] = Convert.ToInt32(Console.ReadLine());
+    for (int i = 0; i < nums.Length; i++)
+    {
+        Console.WriteLine($"Введите число ({i})");
+        nums[i] = Convert.ToInt32(Console.ReadLine());
+    }
 }
 
 void PrintArray(int[] array) //далем метод для вывода на печать массив через Void
@@ -23,20 +27,20 @@ void PrintArray(int[] array) //далем метод для вывода на п
     Console.Write(" ");
 }
 
-
 int CountNum(int[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > 0) count ++;
+        if (arr[i] > 0) count++;
     }
     return count;
 
 }
 // InputNumbers (num);
+FillArray(array);
 int countNum = CountNum(array);
-PrintArray (array);
+PrintArray(array);
 Console.Write($"-> {countNum}");
 
 
