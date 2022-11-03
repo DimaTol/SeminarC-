@@ -35,6 +35,5 @@ void PrintMatrix (double[,] matrix)
     Console.WriteLine(" ");
     }
 }
-
 double [,] array2d = CreateMatrixRndInt (3,4,-10,10);
 PrintMatrix (array2d);
