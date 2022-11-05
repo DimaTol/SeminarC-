@@ -21,7 +21,6 @@ double[,] CreateMatrixRndInt(int row, int columns, int min, int max) //
 return matrix;
 }
 
-
 void PrintMatrix (double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
