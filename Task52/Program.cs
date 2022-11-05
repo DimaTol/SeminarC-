@@ -44,15 +44,15 @@ void ArefArray(double[,] arr)
         double sum = 0;
         for (int a = 0; a < arr.GetLength(0); a++)
         {
-            sum += arr[a, b];
-
+            sum += arr[a,b];
+            
         }
         aref = sum / arr.GetLength(0);
-        Console.WriteLine($"Среднее арефметическое значений из столбца {b + 1} равно: {aref}");
+        Console.WriteLine ($"Среднее арефметическое значений из столбца {b+1} равно: {aref}");
     }
-
+    
 }
 
 double[,] array2D = CreateMatrixRndInt(2, 2, 1, 10);
 PrintMatrix(array2D);
-ArefArray(array2D);
+ArefArray (array2D);
