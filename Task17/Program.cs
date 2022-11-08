@@ -8,13 +8,6 @@ int x = Convert.ToInt32(Console.ReadLine());
 Console.Write ("Y: ");
 int y = Convert.ToInt32(Console.ReadLine());
 
-int quarter = Quarter (x,y); // 2 - используем Метод, который создали
-
-string result = quarter > 0 ? $"Указанные координаты соответствую четверти => {quarter}"
-                            :"Введены неверные координаты"; // 3 - выводим результат
-
-System.Console.WriteLine(result);
-
 
 int Quarter (int xc, int yc) // 1 - сделали Метод, который возвращает значение
 {
@@ -25,3 +18,11 @@ int Quarter (int xc, int yc) // 1 - сделали Метод, который в
     return 0;
 
 }
+
+
+int quarter = Quarter (x,y); // 2 - используем Метод, который создали
+
+string result = quarter > 0 ? $"Указанные координаты соответствую четверти => {quarter}"
+                            :"Введены неверные координаты"; // 3 - выводим результат
+
+System.Console.WriteLine(result);
