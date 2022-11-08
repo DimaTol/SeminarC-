@@ -40,31 +40,56 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
-void SortingArray(int[,] sortingArray)
+// void SortingArray(int[,] sortingArray)
+// {
+//     int temp;
+//     int max;
+//     for (int i = 0; i < sortingArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < sortingArray.GetLength(1) - 1; j++)
+//         {
+//             max = j;
+
+//             for (int k = j; k < sortingArray.GetLength(1); k++)
+//             {
+//                 if (sortingArray[i, k] > sortingArray[i, max])
+//                 {
+//                     max = k;
+//                 }
+//             }
+//             if (max != j)
+//             {
+//                 temp = sortingArray[i, j];
+//                 sortingArray[i, j] = sortingArray[i, max];
+//                 sortingArray[i, max] = temp;
+//             }
+//         }
+//     }
+// }
+
+
+int SortingArr(int[,] sortingArray)
 {
-    int temp;
-    int max;
+    int array = 0;
     for (int i = 0; i < sortingArray.GetLength(0); i++)
     {
-        for (int j = 0; j < sortingArray.GetLength(1) - 1; j++)
-        {
-            max = j;
 
-            for (int k = j; k < sortingArray.GetLength(1); k++)
+        for (int j = 0; j < sortingArray.GetLength(1); j++)
+        {
+
+            for (int k = 0; k < sortingArray.GetLength(1) - 1; k++)
             {
-                if (sortingArray[i, k] > sortingArray[i, max])
+                if (sortingArray[i, k] < sortingArray[i, k+1])
                 {
-                    max = k;
+                    int temp = sortingArray[i, k];
+                    sortingArray[i, k] = sortingArray[i, k+1];
+                    sortingArray[i, k+1] = temp;
                 }
             }
-            if (max != j)
-            {
-                temp = sortingArray[i, j];
-                sortingArray[i, j] = sortingArray[i, max];
-                sortingArray[i, max] = temp;
-            }
         }
+
     }
+    return array;
 }
 
 
@@ -72,5 +97,6 @@ int[,] array2d = CreateMatrixRndInt(3, 4, 1, 10);
 PrintMatrix(array2d);
 Console.WriteLine();
 
-SortingArray (array2d);
+// SortingArray (array2d);
+int sort = SortingArr (array2d);
 PrintMatrix(array2d);
