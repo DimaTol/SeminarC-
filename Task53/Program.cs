@@ -1,4 +1,4 @@
-﻿// Андрей Булгаков: Задача 53: Задайте двумерный массив. Напишите программу,
+﻿// Задача 53: Задайте двумерный массив. Напишите программу,
 // которая поменяет местами первую и последнюю строку
 // массива.
 
@@ -32,7 +32,7 @@ void PrintMatrix (int[,] matrix)
     }
 }
 
-void ExchangeRowColumns (int [,] matrix)
+void ExchangeRow (int [,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -46,5 +46,5 @@ int[,] array2D = CreateMatrixRndInt(4, 4, 1, 10);
 PrintMatrix(array2D);
 
 Console.WriteLine();
-ExchangeRowColumns (array2D);
+ExchangeRow (array2D);
 PrintMatrix (array2D);
