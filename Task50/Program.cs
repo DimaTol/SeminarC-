@@ -55,19 +55,20 @@ int FindElement(int[,] arr, int num1, int num2)
     return find;
 }
 
+
 bool Element(int[,] arr, int num1, int num2)
 {
     {
-        return (num1 >= arr.GetLength(0) || num2 >= arr.GetLength(1));
+        return (num1 >= 0 && num1 < arr.GetLength(0) && num2 >= 0 && num2 < arr.GetLength(1));
     }
 }
 
 int[,] array2d = CreateMatrixRndInt(3, 4, 0, 9);
 PrintMatrix(array2d);
-int findElement = FindElement(array2d, m, n);
+// int findElement = FindElement(array2d, m, n);
 bool element = Element(array2d, m, n);
-if (element) Console.WriteLine($"Элемента с позицией {m} и {n} нет в массиве");
-else Console.WriteLine($"Значение элементов двумерного массива: {findElement}");
+if (element) Console.WriteLine($"значение  элементов {m} и {n}");
+else Console.WriteLine($"Такого элемента не существует");
 
 
 
