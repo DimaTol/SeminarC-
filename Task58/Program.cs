@@ -56,6 +56,7 @@ PrintMatrix(array2d1);
 Console.WriteLine("и");
 int[,] array2d2 = CreateMatrixRndInt(4, 5, 1, 10);
 PrintMatrix(array2d2);
+
 bool quatro = Quatro(array2d1, array2d2);
 Console.WriteLine();
 if (quatro)
