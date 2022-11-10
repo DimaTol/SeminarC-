@@ -46,13 +46,22 @@ int[,] Multiplication2dArray(int[,] array1, int[,] array2)
     }
     return array1;
 }
+bool Quatro(int[,] arr1, int[,] arr2)
+{
+    return (arr1.GetLength(0) == arr2.GetLength(0) && arr1.GetLength(1) == arr2.GetLength(1));
+}
 
-
-int[,] array2d1 = CreateMatrixRndInt(2, 2, 1, 10);
+int[,] array2d1 = CreateMatrixRndInt(4, 5, 1, 10);
 PrintMatrix(array2d1);
 Console.WriteLine("и");
-int[,] array2d2 = CreateMatrixRndInt(2, 2, 1, 10);
+int[,] array2d2 = CreateMatrixRndInt(4, 5, 1, 10);
 PrintMatrix(array2d2);
-Console.WriteLine("=");
-int [,] multArray = Multiplication2dArray (array2d1,array2d2);
-PrintMatrix (multArray);
+bool quatro = Quatro(array2d1, array2d2);
+Console.WriteLine();
+if (quatro)
+{
+    Console.WriteLine("=");
+    int[,] multArray = Multiplication2dArray(array2d1, array2d2);
+    PrintMatrix(multArray);
+}
+else Console.WriteLine("Произведение данных матриц невозможно");
