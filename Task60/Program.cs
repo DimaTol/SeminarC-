@@ -40,5 +40,5 @@ void PrintArray(int[,,] array)
     }
 }
 
-int[,,] array3d = CreateMatrixRndInt(2, 2, 2, 1, 10);
+int[,,] array3d = CreateMatrixRndInt(4, 4, 4, 1, 10);
 PrintArray(array3d);
