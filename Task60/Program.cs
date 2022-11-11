@@ -15,11 +15,11 @@ int[,,] CreateMatrixRndInt(int row, int columns, int depth, int min, int max)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(2); k++)
-        {
-            matrix[i, j, k] = number;
-            number+=1;
+            {
+                matrix[i, j, k] = number;
+                number += 1;
+            }
         }
-    }
     }
     return matrix;
 }
@@ -32,7 +32,7 @@ void PrintArray(int[,,] array)
         {
             for (int k = 0; k < array.GetLength(2); k++)
             {
-                Console.Write($"{array[i, j, k], 4} ({i}, {j}, {k})");
+                Console.Write($"{array[i, j, k],4} ({i}, {j}, {k})");
             }
             Console.WriteLine();
 
