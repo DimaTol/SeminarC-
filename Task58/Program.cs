@@ -35,34 +35,40 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] Multiplication2dArray(int[,] array1, int[,] array2)
+int[,] Multiplication2dArray(int[,] array1, int[,] array2, int[,] arrayFinal)
 {
     for (int i = 0; i < array1.GetLength(0); i++)
     {
         for (int j = 0; j < array2.GetLength(1); j++)
         {
-            array1[i, j] = array1[i, j] * array2[i, j];
+            arrayFinal[i, j] = default;
+            for (int k = 0; k < array2.GetLength(1); k++)
+            {
+                arrayFinal[i, j] = arrayFinal[i, j] + (array1[i, k] * array2[k, j]);
+            }
         }
     }
-    return array1;
-}
-bool Quatro(int[,] arr1, int[,] arr2)
-{
-    return (arr1.GetLength(0) == arr2.GetLength(0) && arr1.GetLength(1) == arr2.GetLength(1));
+    return arrayFinal;
 }
 
-int[,] array2d1 = CreateMatrixRndInt(4, 5, 1, 10);
+bool Quatro(int[,] arr1, int[,] arr2)
+{
+    return (arr1.GetLength(0) == arr2.GetLength(1));
+}
+
+int[,] array2d1 = CreateMatrixRndInt(4, 4, 0, 4);
 PrintMatrix(array2d1);
 Console.WriteLine("и");
-int[,] array2d2 = CreateMatrixRndInt(4, 5, 1, 10);
+int[,] array2d2 = CreateMatrixRndInt(4, 4, 0, 4);
 PrintMatrix(array2d2);
+int[,] arrayFin = new int [4,4];
 
 bool quatro = Quatro(array2d1, array2d2);
 Console.WriteLine();
 if (quatro)
 {
     Console.WriteLine("=");
-    int[,] multArray = Multiplication2dArray(array2d1, array2d2);
+    int[,] multArray = Multiplication2dArray(array2d1, array2d2, arrayFin);
     PrintMatrix(multArray);
 }
 else Console.WriteLine("Произведение данных матриц невозможно");
