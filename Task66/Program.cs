@@ -4,7 +4,6 @@
 // // M = 1; N = 15 -> 120
 // // M = 4; N = 8. -> 30
 
-
 Console.WriteLine("Введите целое число: ");
 int numberM = Convert.ToInt32 (Console.ReadLine());
 
@@ -15,15 +14,6 @@ int SummElements (int numM, int numN)
 {
     
     int summ = default;
-    // if (numM <= numN)
-    // {
-    //     // // Console.Write($"{numM} ");
-    //     // return summ = summ + numM + SummElements(numM -1, numN);
-    // }
-
-   
-    
-        // Console.Write($"{numM} ");
         
         if (numM <= numN)
         return summ = summ + numM + SummElements(numM+1, numN);
@@ -32,17 +22,6 @@ int SummElements (int numM, int numN)
 
 }
 
-
-
-
-// bool Element(int numbM, int numbN)
-// {
-//     {
-//         return (numM <= numN);
-//     }
-// }
-
-// bool element = Element (numberM, numberN);
 if (numberN <= numberM)
 {
 int summ = SummElements (numberN, numberM);
