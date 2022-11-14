@@ -13,11 +13,7 @@ int numberN = Convert.ToInt32 (Console.ReadLine());
 void NaturalNumbers(int num1, int num2)
 {
 
-    if (num1 == num2)
-    {
-        Console.Write($"{num1} ");
-    }
-
+    if (num1 == num2) Console.Write($"{num1} ");
     if (num1 < num2)
     {
         Console.Write($"{num1} ");
