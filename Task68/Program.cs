@@ -19,9 +19,7 @@ int Akkerman(int m, int n)
     {
         return Akkerman(m - 1, 1);
     }
-    {
-        return (Akkerman(m - 1, Akkerman(m, n - 1)));
-    }
+    return (Akkerman(m - 1, Akkerman(m, n - 1)));
 }
 Akkerman(numberM, numberN);
-Console.Write (Akkerman(numberM,numberN)); 
+Console.Write(Akkerman(numberM, numberN));
