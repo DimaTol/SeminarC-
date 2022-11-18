@@ -9,14 +9,20 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-Cube(number);
-void Cube(int number)
+
+int Cube(int number)
 {
-    int count = 1;
-    while (count <= number)
+    int cube =0;
+    int count = 0;
+    for (int i = 0; i <= number; i++)
     {
-        int cube = count * count * count;
+        cube = count * count * count;
         Console.WriteLine($"{count}|{cube}");
         count++;
     }
+    return cube;
 }
+
+int cube = Cube(number);
+
+
